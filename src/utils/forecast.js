@@ -8,7 +8,7 @@ const forecast = (lat, long, callback) => {
         } else if (body.error) {
             callback('Unable to find that lat long pair. Try another search.', undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + ' The current temp is: ' + body.currently.temperature + ', and the chance of rain is:' + body.currently.precipProbability) 
+            callback(undefined, body.daily.data[0].summary + ' The current temp is: ' + body.currently.temperature + ', and the chance of rain is: ' + body.currently.precipProbability + '. The highest temperature will be '+ body.daily.data[0].temperatureHigh) 
             }
         })
 }
